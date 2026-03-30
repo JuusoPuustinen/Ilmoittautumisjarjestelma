@@ -1,0 +1,630 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.kirjauduteksti{
+  font-size: 60px;
+}
+
+.App {
+  text-align: center;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.navBar{
+  height: 10vh;
+  background-color: #c0bdff;
+}
+
+.userSuccess {
+	background-color: lightgreen;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20vw;
+	font-size: clamp(1rem, 1.3vw, 2rem);
+}
+  
+.userFailure {
+	background-color: red;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20vw;
+	font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+.muutosdivi {
+	background-color: red;
+	width: 20vw;
+	border-width: 3px;
+	border: solid;
+	border-radius: 2px;
+}
+
+.peruutaNappi{
+	background-color: red;
+	height: 5.2vh;
+	width: 15vh;
+	font-size: 1.65vh;
+	border-radius: 10px;
+}
+
+.hyvaksyNappi{
+	background-color: green;
+	height: 5.2vh;
+	width: 15vh;
+	font-size: 1.65vh;
+	border-radius: 10px;
+}
+
+.muutoskohta[data-nakyvyys = "1"]{
+	display: flex;
+}
+
+.muutoskohta[data-nakyvyys = "0"]{
+	display: none;
+}
+
+.piilotettavaSarake[data-aktiivinen = "1"]{
+	display: none;
+}
+
+.piilotettavaSarake[data-aktiivinen = "0"]{
+	display: "";
+}
+
+.tervetulodivi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+/* .formi input {
+	border: none;
+	border-bottom: 2px solid black;
+	padding: 0 10px;
+	background: none;
+	min-width: 200px;
+}
+
+.formi span label {
+	min-width: 190px;
+	display: inline-block;
+	text-align: left;
+}
+
+form span select {
+	min-width: 145px;
+	display: inline-block;
+	text-align: left;
+} */
+
+.nappicss{
+	min-width: 200px;
+	height: 37px;
+	border: none;
+	background: white;
+	padding: 3px 10px;
+	border-radius: 5px;
+	margin-bottom: 2px;
+}
+
+.scrollSection td:hover{
+	background: lightgrey;
+	border-radius: 5px;
+}
+
+td{
+	padding: 2px 0;
+}
+
+.scrollSection tr:hover{
+	background: gainsboro;
+}
+
+
+.nappicss:hover{
+	background: lightgrey;
+}
+
+.formiKentta{
+	padding-top: 3px;
+	display: block;
+}
+
+.formiKentta2{
+	padding-top: 15px;
+	display: block;
+}
+
+.nelioLabel{
+	padding-right: 15px;
+}
+
+.kayttajadataformi{
+	padding-top: 100px;
+}
+
+.exceldiv img{
+	width: 100%;
+}
+
+.edellinenmuutettudiv{
+	position: absolute;
+	left: 0;
+	text-align: left;
+	border-color: black;
+	border: solid;
+	border-radius: 5px;
+	font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+	left: 5px;
+}
+
+.edellinenmuutettuOtsikko{
+	font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.osallistujatSisempi{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.haku{
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: auto;
+	max-height: 60vh;
+	overflow: auto;
+	scrollbar-width: none;
+	font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+input[type=checkbox]{
+	  /* Double-sized Checkboxes */
+	  -ms-transform: scale(2.5); /* IE */
+	  -moz-transform: scale(2.5); /* FF */
+	  -webkit-transform: scale(2.5); /* Safari and Chrome */
+	  -o-transform: scale(2.5); /* Opera */
+	  transform: scale(2.5);
+	  margin-bottom: 22px;
+}
+
+.hakukentta{
+ width: 40%;
+ height: 2.5vh;
+ border-radius: 5px;
+}
+
+wrapper > * {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1em;
+  }
+  
+  #hide {
+	position: absolute;
+	opacity: 0;
+	z-index: -100;
+	white-space: pre;
+  }
+  
+  input {
+	min-width: 10px;
+	padding: 0;
+  }
+
+.nakyma[data-aktiivinen="1"]{
+	width: 50%;
+	border: solid;
+	border-width: 3px;
+	border-radius: 10px;
+	font-size: clamp(1rem, 1.3vw, 2rem);
+	position: relative;
+}
+
+.nakyma[data-aktiivinen="0"]{
+	position: absolute; top: -9999px; left: -9999px;
+	height: 100px;
+}
+
+.ruksinappi{
+	position: absolute;
+	right: 1vw;
+	top: 2.1vh;
+	font-size: clamp(1rem, 0.8vw, 2rem)
+}
+
+.contentDiv {
+	display: flex;
+	align-items: center;
+	height: 6.5vh;
+	border-bottom: 2px solid black;
+}
+
+.kategoria {
+	/* border-right: 3px solid black; */
+}
+
+.kentta {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.muokattavaKentta{
+	/* pointer-events: none; */
+	border: none;
+	display: inline;
+	font-family: inherit;
+	font-size: inherit;
+	padding: none;
+	width: 100px;
+	background: none;
+	max-width: 350px;
+	overflow: auto;
+}
+
+/* .visible{
+	font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+.visible[data-a="1"] ~ .hidden {
+	display: block;
+	margin: 1vh;
+}
+
+.hidden {
+	display: none;
+	border: solid;
+	border-width: 3px;
+	width: 20vw;
+} */
+
+.skanneri img{
+	display: none;
+}
+
+.skanneriWrapper{
+	padding-top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.lisaaMajoitukseenKentta{
+	visibility: hidden;
+}
+
+.skanneri{
+	width: 800px;
+	bottom: 5px;
+	background-color: transparent;
+	border-width: 0px;
+	border-color: transparent;
+}
+
+/* .skanneri span{
+	display: none;
+} */
+
+#html5-qrcode-button-camera-permission {
+    text-indent: -9999px;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+#html5-qrcode-button-camera-permission:after {
+    content: "Aktivoi qr/viivakoodin lukija";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+	font-size: clamp(1rem, 1vw, 2rem);
+}
+
+#html5-qrcode-button-camera-start {
+    text-indent: -9999px;
+    line-height: 0;
+    margin-bottom: 10px;
+  }
+#html5-qrcode-button-camera-start:after {
+    content: "Aktivoi qr/viivakoodin lukija";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+	font-size: clamp(1rem, 1vw, 2rem);
+}
+
+#html5-qrcode-button-camera-stop {
+    text-indent: -9999px;
+    line-height: 0;
+    margin-bottom: 10px;
+  }
+#html5-qrcode-button-camera-stop:after {
+    content: "Lopeta";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+	font-size: clamp(1rem, 1vw, 2rem);
+}
+
+#html5-qrcode-anchor-scan-type-change{
+	display: none;
+	visibility: hidden;
+}
+
+/* .skanneritestaus{
+	width: 400px;
+	
+	bottom: 100px;
+	background-color: transparent;
+	border-width: 0px;
+	border-color: transparent;
+	max-height: 100px;
+} */
+
+#html5qr-code-full-region__dashboard_section{
+	margin: 0px;
+	padding: 0px;
+}
+
+#html5qr-code-full-region{
+	height: 0px;
+}
+
+#html5qr-code-full-region__scan_region{
+	position: absolute; top: -9999px; left: -9999px;
+	height: 100px;
+}
+
+/* #html5qr-code-full-region__scan_region{
+	width: 500px;
+} */
+
+
+.affected[data-piilotettu="1"]{
+	display: none;
+}
+
+.asetusmenuNappi{
+	left: 0px;
+	top: 0px;
+	height: 4vh;
+	width: 4vh;
+	border: none;
+	background: none;
+}
+
+.asetusmenuDiv{
+	position: absolute;
+	left: 50px;
+	top: 1vh;
+	background-color: transparent;
+}
+
+.asetusmenu{
+	flex-direction: column;
+}
+
+.navMenu {
+ height: 100%;
+ width: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row;
+ justify-content: space-between;
+ margin: auto;
+}
+
+.navLink{
+  color: #2d2d2e;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 70%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 4px;
+}
+
+.navLink:hover{
+  background-color: #aba8e2;
+}
+
+.megaisoDiv{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.kokokayttajaDiv{
+	display: flex;
+	width: 80%;
+	justify-content: center;
+}
+
+.kayttajatWrapper {
+	overflow: auto;
+	height: 800px;
+	width: 500px;
+	margin: auto;
+}
+
+.kayttajaDiv {
+	font-size: 1.3em;
+	width:400px;
+	padding:15px;
+	margin:40px auto;
+	background: rgb(243, 243, 243);
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+
+.poistaNappi {
+	font-size: 18px;
+	padding: 10px 14px;
+	background-color: rgb(255, 193, 193);
+}
+
+li {
+  list-style: none;
+  padding-bottom: 18px;
+}
+
+  .visible[data-a="1"] > .hidden {
+	display: block;
+  }
+  
+  .hidden{
+	display: none;
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.form-style-10{
+	width:450px;
+	padding:30px;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+	padding: 30px;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+.form-style-10 h1{
+	background: #c0bdff;
+	padding: 20px 30px 15px 30px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #c0bdff;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 label{
+	display: block;
+	font: 20px Arial, Helvetica, sans-serif;
+	color: black;
+	margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="number"],
+.form-style-10 input[type="search"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border: 2px solid #fff;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #2A88AD;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #2A88AD;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -45px;
+	color: #fff;
+	margin-top: -3px;
+}
+.form-style-10 input[type="button"], 
+.form-style-10 input[type="submit"]{
+	background: #2A88AD;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+	font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="submit"]:hover{
+	background: #2A6881;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+	float: right;
+	width: 250px;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #4D4D4D;
+	margin-top: 10px;
+	text-align: right;
+}

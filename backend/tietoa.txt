@@ -1,0 +1,1 @@
+backend päälle komennolla: npm run dev

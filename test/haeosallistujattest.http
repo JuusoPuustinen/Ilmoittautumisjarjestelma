@@ -1,0 +1,3 @@
+GET http://localhost:3001/haeosallistujat HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaW1pIjoiQWRtaW4iLCJpZCI6MSwicm9vbGkiOiJhZG1pbiIsImlhdCI6MTY5NTIxODk3NX0.F2F4NDbaOUWAumL2WlAi5GMGH1-HprMwlwawH5cMHas
+content-type: application/json

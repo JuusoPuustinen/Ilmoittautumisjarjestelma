@@ -1,0 +1,7 @@
+tietokantojen luomiseen:
+npx knex migrate:latest
+npx knex migrate:rollback
+
+testidatan lisäämiseen:
+npx knex seed:run
+salasana salataan
